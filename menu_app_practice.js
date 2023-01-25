@@ -107,6 +107,13 @@ class Menu {
         }
     }
 
+    deleteTeam() {
+        let index = propmt(`Enter the name of the team you wish to delete:`);
+        if (index > -1 && index < this.teams.length) {
+            this.teams.splice(index, 1);
+        }
+    }
+
     createPlayer() {
         let name = prompt(`Enter name for new player:`);
         let position = prompt(`Enter position for new player:`);
